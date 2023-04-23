@@ -1,4 +1,4 @@
-package top.whf.security;
+package top.whf.security.user;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 /**

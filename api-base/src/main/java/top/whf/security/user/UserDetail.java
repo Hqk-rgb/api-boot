@@ -1,4 +1,4 @@
-package top.whf.security;
+package top.whf.security.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;

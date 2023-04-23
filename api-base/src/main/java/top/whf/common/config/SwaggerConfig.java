@@ -1,7 +1,38 @@
-package top.whf.common.config;/**
-   * @ClassName SwaggerConfig 
-   * @Description TODO
-   * @Author Dr.king
-   * @Date 2023/4/23 18:07
-   */ public class SwaggerConfig {
+package top.whf.common.config;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import org.springdoc.core.models.GroupedOpenApi;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+/**
+ * @ClassName SwaggerConfig
+ * @Description TODO
+ * @Author Dr.king
+ * @Date 2023/4/23 18:07
+ */
+@Configuration
+public class SwaggerConfig {
+    @Bean
+    public GroupedOpenApi userApi() {
+        String[] paths = {"/**"};
+        String[] packagedToMatch = {"top.whf"};
+        return GroupedOpenApi.builder().group("api boot")
+                .pathsToMatch(paths)
+                .packagesToScan(packagedToMatch).build();
+    }
+
+    @Bean
+    public OpenAPI customOpenApi() {
+        Contact contact = new Contact();
+        contact.setName("whfest@qq.com");
+
+        return new OpenAPI().info(new Info()
+                .title("接口文档")
+                .description("接口文档")
+                .contact(contact)
+                .version("1.0.0")
+                .termsOfService("https://whf.top"));
+    }
 }

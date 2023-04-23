@@ -1,7 +1,32 @@
-package top.whf.rbac.vo;/**
-   * @ClassName SysAccountLoginVO 
-   * @Description TODO
-   * @Author Dr.king
-   * @Date 2023/4/23 19:30
-   */ public class SysAccountLoginVO {
+package top.whf.rbac.vo;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+
+import java.io.Serial;
+import java.io.Serializable;
+
+/**
+ * @ClassName SysAccountLoginVO
+ * @Description TODO
+ * @Author Dr.king
+ * @Date 2023/4/23 19:30
+ */
+@Data
+@Schema(description = "账号登录")
+public class SysAccountLoginVO implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    @Schema(description = "用户名")
+    private String username;
+
+    @Schema(description = "密码")
+    private String password;
+
+    @Schema(description = "唯一key")
+    private String key;
+
+    @Schema(description = "验证码")
+    private String captcha;
 }
