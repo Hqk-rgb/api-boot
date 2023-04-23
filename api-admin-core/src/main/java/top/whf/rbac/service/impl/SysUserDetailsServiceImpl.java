@@ -34,7 +34,10 @@ public class SysUserDetailsServiceImpl implements SysUserDetailsService{
         }
 
         // 用户权限列表
-        Set<String> authoritySet = new HashSet<>();
+//        Set<String> authoritySet = new HashSet<>();
+//        userDetail.setAuthoritySet(authoritySet);
+        //开启通知模块的权限功能
+        Set<String> authoritySet = sysMenuService.getUserAuthority(userDetail);
         userDetail.setAuthoritySet(authoritySet);
 
         return userDetail;

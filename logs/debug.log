@@ -39,3 +39,75 @@
 2023-04-23 20:56:55.185 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.updateById - <==    Updates: 1
 2023-04-23 21:03:23.473 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
 2023-04-23 21:03:25.304 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 21:03:44.124 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 21:03:45.878 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 21:04:54.460 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 21:04:54.481 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 21:04:54.499 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 21:04:54.613 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-23 21:04:54.614 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 0(Integer), 3(Integer), 2023-04-23 21:04:54.61(Timestamp)
+2023-04-23 21:04:54.622 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-23 21:05:49.436 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 21:05:49.436 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 21:05:49.438 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 21:05:49.531 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-23 21:05:49.533 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-23 21:05:49.531(Timestamp)
+2023-04-23 21:05:49.537 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-23 21:06:18.368 [http-nio-8080-exec-28] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_log_login
+2023-04-23 21:06:18.368 [http-nio-8080-exec-28] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - ==> Parameters: 
+2023-04-23 21:06:18.372 [http-nio-8080-exec-28] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - <==      Total: 1
+2023-04-23 21:06:18.379 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - ==>  Preparing: SELECT id,username,ip,address,user_agent,status,operation,create_time FROM sys_log_login ORDER BY id DESC LIMIT ?
+2023-04-23 21:06:18.379 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - ==> Parameters: 5(Long)
+2023-04-23 21:06:18.381 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - <==      Total: 5
+2023-04-23 21:18:23.713 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 21:18:25.732 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 21:19:19.776 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 21:19:19.794 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 21:19:19.818 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 21:19:19.944 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-23 21:19:19.945 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-23 21:19:19.94(Timestamp)
+2023-04-23 21:19:19.953 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-23 21:19:45.372 [http-nio-8080-exec-23] DEBUG top.whf.dao.NoticeDao.selectList - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0
+2023-04-23 21:19:45.372 [http-nio-8080-exec-23] DEBUG top.whf.dao.NoticeDao.selectList - ==> Parameters: 
+2023-04-23 21:19:45.398 [http-nio-8080-exec-23] DEBUG top.whf.dao.NoticeDao.selectList - <==      Total: 100
+2023-04-23 21:20:58.333 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectList - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0
+2023-04-23 21:20:58.334 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectList - ==> Parameters: 
+2023-04-23 21:20:58.351 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectList - <==      Total: 100
+2023-04-23 21:29:44.509 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 21:29:46.763 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 21:30:27.921 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 21:30:27.942 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 21:30:27.963 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 21:30:27.972 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-23 21:30:27.973 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-23 21:30:27.977 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 33
+2023-04-23 21:30:28.089 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-23 21:30:28.090 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-23 21:30:28.086(Timestamp)
+2023-04-23 21:30:28.098 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-23 21:30:56.108 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-23 21:30:56.108 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-23 21:30:56.111 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-23 21:30:56.116 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-23 21:30:56.117 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 10(Long)
+2023-04-23 21:30:56.123 [http-nio-8080-exec-24] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 10
+2023-04-23 21:31:10.916 [http-nio-8080-exec-29] DEBUG top.whf.dao.NoticeDao.insert - ==>  Preparing: INSERT INTO t_notice ( id, title, content, creator, create_time, updater, update_time, deleted ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2023-04-23 21:31:10.917 [http-nio-8080-exec-29] DEBUG top.whf.dao.NoticeDao.insert - ==> Parameters: 0(Long), test(String), test(String), 10000(Long), 2023-04-23 21:31:10.916(Timestamp), 10000(Long), 2023-04-23 21:31:10.916(Timestamp), 0(Integer)
+2023-04-23 21:31:10.921 [http-nio-8080-exec-29] DEBUG top.whf.dao.NoticeDao.insert - <==    Updates: 1
+2023-04-23 21:32:03.545 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.updateById - ==>  Preparing: UPDATE t_notice SET title=?, content=?, updater=?, update_time=? WHERE id=? AND deleted=0
+2023-04-23 21:32:03.546 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.updateById - ==> Parameters: 测试通知(String), 测试通知(String), 10000(Long), 2023-04-23 21:32:03.539(Timestamp), 109(Long)
+2023-04-23 21:32:03.548 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.updateById - <==    Updates: 0
+2023-04-23 21:32:17.865 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectById - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE id=? AND deleted=0
+2023-04-23 21:32:17.866 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectById - ==> Parameters: 109(Long)
+2023-04-23 21:32:17.867 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectById - <==      Total: 0
+2023-04-23 21:32:52.804 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectById - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE id=? AND deleted=0
+2023-04-23 21:32:52.805 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectById - ==> Parameters: 109(Long)
+2023-04-23 21:32:52.807 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectById - <==      Total: 0
+2023-04-23 21:32:59.974 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectById - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE id=? AND deleted=0
+2023-04-23 21:32:59.975 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectById - ==> Parameters: 109(Long)
+2023-04-23 21:32:59.976 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectById - <==      Total: 0
+2023-04-23 21:33:05.903 [http-nio-8080-exec-3] DEBUG top.whf.dao.NoticeDao.selectById - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE id=? AND deleted=0
+2023-04-23 21:33:05.904 [http-nio-8080-exec-3] DEBUG top.whf.dao.NoticeDao.selectById - ==> Parameters: 101(Long)
+2023-04-23 21:33:05.905 [http-nio-8080-exec-3] DEBUG top.whf.dao.NoticeDao.selectById - <==      Total: 1
+2023-04-23 21:33:24.387 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-23 21:33:24.388 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-23 21:33:24.386(Timestamp), 109(Long)
+2023-04-23 21:33:24.391 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.deleteById - <==    Updates: 0

@@ -24,6 +24,11 @@
             <artifactId>api-admin-core</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>top.whf</groupId>
+            <artifactId>api-admin-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
