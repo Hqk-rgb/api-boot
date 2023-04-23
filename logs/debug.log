@@ -10,3 +10,8 @@
 2023-04-23 20:23:01.752 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
 2023-04-23 20:23:01.753 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
 2023-04-23 20:23:01.755 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 20:31:51.967 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 20:31:53.853 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 20:39:26.693 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 20:39:26.708 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 20:39:26.724 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import top.whf.rbac.convert.SysUserConvert;
 import top.whf.rbac.entity.SysUserEntity;
 import top.whf.rbac.enums.UserStatusEnum;
+import top.whf.rbac.service.SysMenuService;
 import top.whf.rbac.service.SysUserDetailsService;
 import top.whf.security.user.UserDetail;
 
@@ -21,6 +22,7 @@ import java.util.Set;
 @Service
 @AllArgsConstructor
 public class SysUserDetailsServiceImpl implements SysUserDetailsService{
+    private final SysMenuService sysMenuService;
     @Override
     public UserDetails getUserDetails(SysUserEntity userEntity) {
         // 转换成UserDetail对象
