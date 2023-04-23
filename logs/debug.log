@@ -26,3 +26,16 @@
 2023-04-23 20:52:10.858 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
 2023-04-23 20:52:10.858 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
 2023-04-23 20:52:10.862 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 33
+2023-04-23 20:55:34.751 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 20:55:36.975 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-23 20:56:31.229 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-23 20:56:31.249 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-23 20:56:31.270 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-23 20:56:55.104 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectById - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE id=? AND deleted=0
+2023-04-23 20:56:55.105 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectById - ==> Parameters: 10000(Long)
+2023-04-23 20:56:55.108 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectById - <==      Total: 1
+2023-04-23 20:56:55.173 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.updateById - ==>  Preparing: UPDATE sys_user SET username=?, password=?, real_name=?, avatar=?, gender=?, email=?, mobile=?, super_admin=?, status=?, create_time=?, updater=?, update_time=? WHERE id=? AND deleted=0
+2023-04-23 20:56:55.174 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.updateById - ==> Parameters: admin(String), {bcrypt}$2a$10$gh9X8ALBEcoKxX7RM.guWOeDaGZdOQgY1j.RfConmaqBxd0vHtsV.(String), 吾器酷(String), https://king-hf-bucket.oss-cn-shanghai.aliyuncs.com/avatar/me.jpg(String), 1(Integer), 16422802@qq.com(String), 13951905171(String), 1(Integer), 1(Integer), 2023-04-09 17:33:13.0(Timestamp), 10000(Long), 2023-04-09 17:33:13.0(Timestamp), 10000(Long)
+2023-04-23 20:56:55.185 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.updateById - <==    Updates: 1
+2023-04-23 21:03:23.473 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-23 21:03:25.304 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
