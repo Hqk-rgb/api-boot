@@ -9,4 +9,11 @@ import top.whf.rbac.entity.SysUserEntity;
  * @Date 2023/4/23 19:36
  */
 public interface SysUserService extends BaseService<SysUserEntity>{
+    /**
+     * 修改密码
+     *
+     * @param id          用户ID
+     * @param newPassword 新密码
+     */
+    void updatePassword(Long id, String newPassword);
 }
