@@ -25,6 +25,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/sys/index")
 @Tag(name = "首页统计")
+
 @AllArgsConstructor
 public class IndexController {
     private final IndexService indexService;
@@ -37,8 +38,8 @@ public class IndexController {
     }
     @GetMapping("statics2")
     @Operation(summary = "统计组件2")
-    public Result<BarVO> getStatics2(){
-        BarVO barVO = indexService.statics2();
+    public Result<BarVO> getStatics2(String type){
+        BarVO barVO = indexService.statics2(type);
         return Result.ok(barVO);
     }
     @GetMapping("statics3")

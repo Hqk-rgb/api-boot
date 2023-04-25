@@ -24,7 +24,7 @@ public interface IndexService {
      * 后台首页统计 2:echarts 柱状图
      * @return BarVO
      */
-    BarVO statics2();
+    BarVO statics2(String type);
 
     /**
      * 后台首页统计 3:分类统计标签
