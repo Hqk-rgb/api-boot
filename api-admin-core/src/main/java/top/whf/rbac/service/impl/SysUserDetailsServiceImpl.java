@@ -40,6 +40,7 @@ public class SysUserDetailsServiceImpl implements SysUserDetailsService{
         Set<String> authoritySet = sysMenuService.getUserAuthority(userDetail);
         userDetail.setAuthoritySet(authoritySet);
 
+
         return userDetail;
     }
 }

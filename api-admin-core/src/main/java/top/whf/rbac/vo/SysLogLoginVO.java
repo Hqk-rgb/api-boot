@@ -1,7 +1,9 @@
 package top.whf.rbac.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import top.whf.common.utils.DateUtils;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -40,5 +42,6 @@ public class SysLogLoginVO implements Serializable{
     private Integer operation;
 
     @Schema(description = "创建时间")
+    @JsonFormat(pattern = DateUtils.DATE_TIME_PATTERN)
     private Date createTime;
 }
