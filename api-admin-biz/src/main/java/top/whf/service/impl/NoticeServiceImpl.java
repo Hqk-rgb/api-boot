@@ -55,8 +55,8 @@ public class NoticeServiceImpl extends BaseServiceImpl<NoticeDao, NoticeEntity> 
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void delete(Long id) {
-        removeById(id);
+    public void delete(List<Long> ids) {
+        removeByIds(ids);
     }
 
     /**

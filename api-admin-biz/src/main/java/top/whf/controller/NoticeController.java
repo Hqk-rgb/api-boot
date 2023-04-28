@@ -69,11 +69,11 @@ public class NoticeController {
         return Result.ok();
     }
 
-    @DeleteMapping("{id}")
-    @Operation(summary = "删除通知")
+    @PostMapping("/delete")
+    @Operation(summary = "批量删除通知")
     @PreAuthorize("hasAuthority('sys:notice:delete')")
-    public Result<String> delete(@PathVariable Long id) {
-        noticeService.delete(id);
-        return Result.ok();
+    public Result<String> delete(@RequestBody(required = false) List<Long> ids) {
+        noticeService.delete(ids);
+        return Result.ok("删除成功");
     }
 }

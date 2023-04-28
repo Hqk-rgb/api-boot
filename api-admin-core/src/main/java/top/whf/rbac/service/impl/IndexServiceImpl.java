@@ -36,12 +36,12 @@ public class IndexServiceImpl implements IndexService {
         switch (type) {
             case "hour" -> {
                 List<String> x = List.of("00", "23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "09", "08", "07", "06", "05", "04", "03", "02", "01");
-                List<Integer> y = List.of(0, 0, 0, 0, 0, 4, 6, 3, 0, 6, 3, 0, 0, 11, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                List<Integer> y = List.of(0, 2, 0, 5, 0, 4, 6, 3, 2, 6, 3, 0, 0, 11, 18, 0, 0, 5, 0, 0, 4, 1, 11, 1);
                 barVO = BarVO.builder().x(x).y(y).build();
             }
             case "week" -> {
                 List<String> x = List.of("07-24", "07-23", "07-22", "07-21", "07-20", "07-19", "07-18");
-                List<Integer> y = List.of(51, 0, 1, 1, 0, 2, 1);
+                List<Integer> y = List.of(51, 12, 40, 2, 36, 25, 17);
                 barVO = BarVO.builder().x(x).y(y).build();
             }
             case "month" -> {
@@ -60,7 +60,7 @@ public class IndexServiceImpl implements IndexService {
         List<LabelVO> orders = List.of(new LabelVO("待付款",24),new LabelVO("待发货",65),new LabelVO("已发货",89),new LabelVO("退款中",1));
         Map<String,List<LabelVO>> map = new HashMap<>();
         map.put("goods",goods);
-        map.put("order", orders);
+        map.put("orders", orders);
         return map;
     }
 }

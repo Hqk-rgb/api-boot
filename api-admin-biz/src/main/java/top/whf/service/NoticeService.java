@@ -45,9 +45,9 @@ public interface NoticeService extends BaseService<NoticeEntity>{
     void update(NoticeVO vo);
 
     /**
-     * 根据id删除通知
+     * 根据id删除通知(批量删除)
      *
-     * @param id id
+     * @param ids ids
      */
-    void delete(Long id);
+    void delete(List<Long> ids);
 }
