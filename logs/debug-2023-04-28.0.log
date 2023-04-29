@@ -1,0 +1,863 @@
+2023-04-28 10:34:11.634 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-28 10:34:13.991 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-28 10:37:03.884 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-28 10:37:03.918 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-28 10:37:03.960 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-28 10:37:03.977 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 10:37:03.977 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 10:37:03.989 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 10:37:04.165 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 10:37:04.166 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-28 10:37:04.161(Timestamp)
+2023-04-28 10:37:04.180 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-28 10:37:44.773 [http-nio-8080-exec-30] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 10:37:44.775 [http-nio-8080-exec-30] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 10:37:44.711(Timestamp), 109(Long)
+2023-04-28 10:37:44.775 [http-nio-8080-exec-30] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 10:37:44.775(Timestamp), 110(Long)
+2023-04-28 10:40:22.314 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-28 10:40:22.315 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-28 10:40:22.317 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-28 10:40:22.318 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 10:40:22.318 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 10:40:22.320 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 10:40:22.412 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 10:40:22.413 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-28 10:40:22.412(Timestamp)
+2023-04-28 10:40:22.416 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-28 10:40:22.443 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 10:40:22.444 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 10:40:22.448 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 10:40:22.450 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 10:40:22.451 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 10:40:22.452 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 10:57:15.150 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 10:57:15.151 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 10:57:15.155 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 10:57:15.161 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 10:57:15.162 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 10:57:15.171 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:00:55.850 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:00:55.851 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:00:55.863 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:00:55.864 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:00:55.865 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:00:55.869 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:00:56.074 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:00:56.074 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:00:56.077 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:00:56.080 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:00:56.082 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:00:56.087 [http-nio-8080-exec-20] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:02:03.609 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:02:03.610 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:02:03.614 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:02:03.615 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:02:03.616 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:02:03.618 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:02:03.749 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:02:03.749 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:02:03.751 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:02:03.752 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:02:03.752 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:02:03.758 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:02:12.211 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:02:12.211 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:02:12.213 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:02:12.214 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:02:12.215 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:02:12.217 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 9
+2023-04-28 11:07:33.737 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:07:33.738 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:07:33.740 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:07:33.741 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:07:33.741 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:07:33.743 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:10:57.509 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:10:57.510 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:10:57.514 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:10:57.515 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:10:57.515 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:10:57.517 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:10:57.764 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:10:57.764 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:10:57.765 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:10:57.767 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:10:57.767 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:10:57.771 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:11:45.288 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:11:45.289 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:11:45.293 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:11:45.295 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:11:45.295 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:11:45.298 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:11:50.880 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:11:50.881 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:11:50.882 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:11:50.883 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:11:50.884 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:11:50.886 [http-nio-8080-exec-14] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:11:57.697 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:11:57.698 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:11:57.699 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:11:57.700 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:11:57.700 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:11:57.702 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 9
+2023-04-28 11:12:04.848 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 11:12:04.849 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:12:04.847(Timestamp), 114(Long)
+2023-04-28 11:12:04.850 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:12:04.849(Timestamp), 115(Long)
+2023-04-28 11:12:04.850 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:12:04.85(Timestamp), 113(Long)
+2023-04-28 11:12:04.893 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:12:04.893 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:12:04.895 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:12:04.896 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:12:04.896 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:12:04.898 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 6
+2023-04-28 11:12:15.663 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.insert - ==>  Preparing: INSERT INTO t_notice ( title, content, creator, create_time, updater, update_time, deleted ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 11:12:15.665 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.insert - ==> Parameters: my(String), my(String), 10000(Long), 2023-04-28 11:12:15.663(Timestamp), 10000(Long), 2023-04-28 11:12:15.663(Timestamp), 0(Integer)
+2023-04-28 11:12:15.667 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.insert - <==    Updates: 1
+2023-04-28 11:12:15.703 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:12:15.704 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:12:15.705 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:12:15.707 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:12:15.707 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:12:15.710 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:12:18.025 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:12:18.025 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:12:18.026 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:12:18.027 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:12:18.027 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:12:18.029 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 7
+2023-04-28 11:13:33.330 [http-nio-8080-exec-1] DEBUG top.whf.dao.NoticeDao.insert - ==>  Preparing: INSERT INTO t_notice ( title, content, creator, create_time, updater, update_time, deleted ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 11:13:33.331 [http-nio-8080-exec-1] DEBUG top.whf.dao.NoticeDao.insert - ==> Parameters: test(String), test(String), 10000(Long), 2023-04-28 11:13:33.329(Timestamp), 10000(Long), 2023-04-28 11:13:33.329(Timestamp), 0(Integer)
+2023-04-28 11:13:33.333 [http-nio-8080-exec-1] DEBUG top.whf.dao.NoticeDao.insert - <==    Updates: 1
+2023-04-28 11:13:33.369 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:13:33.369 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:13:33.371 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:13:33.372 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:13:33.373 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:13:33.375 [http-nio-8080-exec-10] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:13:35.496 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:13:35.496 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:13:35.497 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:13:35.499 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:13:35.499 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:13:35.501 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 8
+2023-04-28 11:13:54.449 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:13:54.451 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:13:54.453 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:13:54.455 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:13:54.456 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:13:54.460 [http-nio-8080-exec-6] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 8
+2023-04-28 11:13:59.943 [http-nio-8080-exec-4] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 11:13:59.944 [http-nio-8080-exec-4] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:13:59.942(Timestamp), 111(Long)
+2023-04-28 11:14:00.003 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:14:00.004 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:14:00.006 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:14:00.007 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:14:00.008 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:14:00.010 [http-nio-8080-exec-13] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 7
+2023-04-28 11:14:51.541 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:14:51.541 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:14:51.545 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:14:51.547 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:14:51.548 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:14:51.550 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:14:51.764 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:14:51.764 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:14:51.767 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:14:51.769 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:14:51.769 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:14:51.773 [http-nio-8080-exec-17] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:14:54.405 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:14:54.405 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:14:54.406 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:14:54.407 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:14:54.407 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:14:54.409 [http-nio-8080-exec-19] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 10
+2023-04-28 11:15:17.317 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 11:15:17.319 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 11:15:17.326 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 11:15:17.328 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 11:15:17.329 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 11:15:17.333 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 11:15:17.867 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:15:17.870 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:15:17.873 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:15:17.877 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:15:17.877 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:15:17.883 [http-nio-8080-exec-22] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:15:20.811 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:15:20.812 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:15:20.814 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:15:20.818 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:15:20.819 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:15:20.825 [http-nio-8080-exec-26] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 10
+2023-04-28 11:15:25.294 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 11:15:25.295 [http-nio-8080-exec-28] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:25.292(Timestamp), 110(Long)
+2023-04-28 11:15:25.401 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:15:25.403 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:15:25.407 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:15:25.410 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:15:25.411 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:15:25.416 [http-nio-8080-exec-27] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 9
+2023-04-28 11:15:32.243 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 11:15:32.244 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:32.24(Timestamp), 111(Long)
+2023-04-28 11:15:32.246 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:32.245(Timestamp), 112(Long)
+2023-04-28 11:15:32.249 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:32.247(Timestamp), 113(Long)
+2023-04-28 11:15:32.251 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:32.25(Timestamp), 116(Long)
+2023-04-28 11:15:32.253 [http-nio-8080-exec-7] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 11:15:32.252(Timestamp), 117(Long)
+2023-04-28 11:15:32.361 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:15:32.362 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:15:32.365 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:15:32.369 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?,?
+2023-04-28 11:15:32.370 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 96(Long), 12(Long)
+2023-04-28 11:15:32.374 [http-nio-8080-exec-9] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 4
+2023-04-28 11:22:01.572 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 11:22:01.573 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:22:01.574 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:22:01.575 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 11:22:01.576 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 11:22:01.577 [http-nio-8080-exec-21] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 11:22:10.550 [http-nio-8080-exec-16] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_log_login
+2023-04-28 11:22:10.551 [http-nio-8080-exec-16] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 11:22:10.563 [http-nio-8080-exec-16] DEBUG t.whf.rbac.dao.SysLogLoginDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 11:22:10.564 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - ==>  Preparing: SELECT id,username,ip,address,user_agent,status,operation,create_time FROM sys_log_login ORDER BY id DESC LIMIT ?
+2023-04-28 11:22:10.565 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - ==> Parameters: 8(Long)
+2023-04-28 11:22:10.569 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.selectPage - <==      Total: 8
+2023-04-28 19:51:27.327 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-28 19:51:31.475 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-28 20:02:05.359 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:02:05.388 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:02:05.445 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:02:05.445 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:02:05.445 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:02:05.445 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:09:24.839 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:09:24.840 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:09:24.852 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:09:24.853 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:09:24.854 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:09:24.856 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:09:44.838 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:09:44.838 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:09:44.844 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:09:44.846 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:09:44.847 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:09:44.850 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:09:45.629 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:09:45.630 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:09:45.635 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:09:45.637 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:09:45.638 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:09:45.640 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:09:50.969 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:09:50.970 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:09:50.974 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:09:50.976 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:09:50.976 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:09:50.978 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:11:55.743 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:11:55.743 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:11:55.747 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:11:55.748 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:11:55.748 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:11:55.750 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:12:27.314 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:12:27.315 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:12:27.319 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:12:27.320 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:12:27.320 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:12:27.321 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:14:00.651 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:14:00.651 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:14:00.655 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:14:00.659 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:14:00.660 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:14:00.663 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:15:08.898 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (super_admin = ?)
+2023-04-28 20:15:08.898 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 0(Integer)
+2023-04-28 20:15:08.900 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 5
+2023-04-28 20:27:30.477 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:27:30.478 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:27:30.480 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:27:30.482 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:27:30.482 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:27:30.484 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:32:24.789 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-28 20:32:26.773 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-28 20:33:35.456 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-04-28 20:33:35.473 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-04-28 20:33:35.489 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-04-28 20:33:35.496 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:33:35.497 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:33:35.499 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:33:35.586 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 20:33:35.587 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-04-28 20:33:35.584(Timestamp)
+2023-04-28 20:33:35.604 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-04-28 20:34:26.411 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.getById - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.id = ? AND t1.deleted = 0
+2023-04-28 20:34:26.412 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.getById - ==> Parameters: 10004(Long)
+2023-04-28 20:34:26.415 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.getById - <==      Total: 1
+2023-04-28 20:34:26.469 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.updateById - ==>  Preparing: UPDATE sys_user SET username=?, password=?, real_name=?, avatar=?, gender=?, email=?, mobile=?, super_admin=?, status=?, creator=?, create_time=?, updater=?, update_time=? WHERE id=? AND deleted=0
+2023-04-28 20:34:26.469 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.updateById - ==> Parameters: ccc(String), {bcrypt}$2a$10$SX4wjbgJlrLNjOeUb2e92e/93Mt6LZqvvGl5HPYZpHnkh9ogTNEwq(String), ccc(String), https://king-hf-bucket.oss-cn-shanghai.aliyuncs.com/avatar/suo.jpg(String), 0(Integer), ccc@qq.com(String), 13933334444(String), 0(Integer), 1(Integer), 10000(Long), 2023-04-18 19:35:04.0(Timestamp), 10000(Long), 2023-04-18 19:35:10.0(Timestamp), 10004(Long)
+2023-04-28 20:34:26.472 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysUserDao.updateById - <==    Updates: 1
+2023-04-28 20:36:11.921 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:36:11.921 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:36:11.930 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:36:11.934 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:36:11.934 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:36:11.936 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 20:39:27.153 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 20:39:27.154 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 20:39:27.162 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 20:39:27.163 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 20:39:27.164 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 20:39:27.166 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:09:35.427 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-28 21:09:37.374 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-04-28 21:09:50.547 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:09:50.581 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:09:50.614 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:09:50.621 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:09:50.622 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:09:50.625 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:10:08.981 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 21:10:08.981 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 21:10:08.989 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 21:10:08.989 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 21:10:08.989 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 21:10:08.989 [http-nio-8080-exec-2] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 21:12:24.830 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:12:24.832 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:12:24.838 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:12:24.839 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:12:24.839 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:12:24.841 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:13:20.875 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:13:20.876 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:13:20.882 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:13:20.883 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:13:20.884 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:13:20.887 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:13:21.227 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:13:21.229 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:13:21.233 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:13:21.234 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:13:21.235 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:13:21.238 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:30:39.410 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:30:39.411 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:30:39.415 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:30:39.416 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:30:39.416 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:30:39.417 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:30:39.586 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:30:39.587 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:30:39.589 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:30:39.590 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:30:39.591 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:30:39.593 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:31:06.673 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:31:06.673 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:31:06.673 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:31:06.673 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:31:06.673 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:31:06.688 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:31:06.859 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:31:06.859 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:31:06.861 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:31:06.861 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:31:06.861 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:31:06.861 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:31:47.281 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:31:47.282 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:31:47.289 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:31:47.292 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:31:47.293 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:31:47.295 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:31:47.943 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:31:47.944 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:31:47.946 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:31:47.948 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:31:47.948 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:31:47.955 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:32:43.694 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:32:43.694 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:32:43.709 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:32:43.709 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:32:43.709 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:32:43.709 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:32:44.003 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:35:15.005 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:35:15.006 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:35:15.009 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:35:15.010 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:35:15.011 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:35:15.012 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:35:15.156 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:35:15.157 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:35:15.159 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:35:15.160 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:35:15.160 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:35:15.162 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:35:46.498 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:35:46.499 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:35:46.503 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:35:46.504 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:35:46.504 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:35:46.506 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:35:46.679 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:35:46.680 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:35:46.681 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:35:46.682 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:35:46.682 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:35:46.684 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:35:56.571 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:35:56.572 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:35:56.575 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:35:56.576 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:35:56.577 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:35:56.579 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:35:56.742 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:35:56.742 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:35:56.743 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:35:56.745 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:35:56.746 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:35:56.748 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 5
+2023-04-28 21:36:19.552 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:36:19.553 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:36:19.554 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:36:19.555 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:36:19.555 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:36:19.556 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:36:19.691 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:36:19.691 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:36:19.693 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:36:19.694 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:36:19.695 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:36:19.697 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 6
+2023-04-28 21:37:17.120 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:37:17.121 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:37:17.123 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:37:17.124 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:37:17.124 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:37:17.126 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:37:17.277 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:37:17.277 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:37:17.278 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:37:17.279 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:37:17.279 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:37:17.281 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 6
+2023-04-28 21:41:11.389 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:41:11.389 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:41:11.392 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:41:11.394 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:41:11.394 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:41:11.396 [http-nio-8080-exec-22] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:41:11.608 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:41:11.609 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:41:11.610 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:41:11.611 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:41:11.612 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:41:11.614 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:41:32.889 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:41:32.889 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:41:32.891 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:41:32.893 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:41:32.894 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:41:32.895 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:41:33.057 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:41:33.058 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:41:33.059 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:41:33.061 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:41:33.061 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:41:33.063 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:41:50.723 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:41:50.723 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:41:50.725 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:41:50.726 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:41:50.726 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:41:50.728 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:41:50.903 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:41:50.903 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:41:50.904 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:41:50.905 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:41:50.905 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:41:50.907 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:42:42.738 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:42:42.738 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:42:42.740 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:42:42.741 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:42:42.741 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:42:42.742 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:42:42.897 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:42:42.897 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:42:42.898 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:42:42.899 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:42:42.899 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:42:42.901 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:44:32.906 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (super_admin = ?)
+2023-04-28 21:44:32.906 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 0(Integer)
+2023-04-28 21:44:32.906 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 7
+2023-04-28 21:47:45.571 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.insert - ==>  Preparing: INSERT INTO sys_user ( username, password, real_name, gender, email, mobile, status, creator, create_time, updater, update_time, deleted ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 21:47:45.574 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.insert - ==> Parameters: dog(String), {bcrypt}$2a$10$oviF4SU60comEpb4WyQ18eXNJQFWqgH377j2PWqjxiuQOEtZD8AAy(String), dog(String), 2(Integer), admin1@qq.com(String), 13911112222(String), 1(Integer), 10000(Long), 2023-04-09 18:03:51.0(Timestamp), 10000(Long), 2023-04-28 21:47:45.567(Timestamp), 0(Integer)
+2023-04-28 21:47:46.127 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:47:46.128 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:47:46.129 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:47:46.131 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:47:46.131 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:47:46.134 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:47:52.514 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:47:52.514 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:47:52.514 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:47:52.515 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:47:52.515 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:47:52.517 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:48:09.075 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:48:09.076 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:48:09.078 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:48:09.079 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:48:09.080 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:48:09.081 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:48:09.339 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:48:09.340 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:48:09.341 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:48:09.342 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:48:09.343 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:48:09.345 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:49:10.625 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:49:10.626 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:49:10.629 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:49:10.631 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:49:10.632 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:49:10.634 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:49:10.936 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:49:10.936 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:49:10.938 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:49:10.939 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:49:10.939 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:49:10.941 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 7
+2023-04-28 21:49:54.841 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:49:54.841 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:49:54.843 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:49:54.844 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:49:54.844 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:49:54.845 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:49:54.985 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:49:54.985 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:49:54.986 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:49:54.987 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:49:54.987 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:49:54.988 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-04-28 21:52:05.196 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:52:05.196 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:52:05.197 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:52:05.198 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:52:05.199 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:52:05.200 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:52:05.367 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:52:05.368 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:52:05.369 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:52:05.370 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:52:05.370 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:52:05.372 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-04-28 21:53:41.110 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:53:41.110 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:53:41.111 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:53:41.111 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:53:41.111 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:53:41.113 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-04-28 21:53:46.439 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 21:53:46.439 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 21:53:46.441 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 21:53:46.443 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 21:53:46.443 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 21:53:46.444 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 21:53:46.592 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:53:46.593 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:53:46.594 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:53:46.594 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:53:46.594 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:53:46.596 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-04-28 21:54:28.319 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:54:28.319 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:54:28.320 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:54:28.321 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:54:28.322 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:54:28.323 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-04-28 21:59:30.586 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.insert - ==>  Preparing: INSERT INTO sys_user ( username, password, real_name, gender, email, mobile, status, creator, create_time, updater, update_time, deleted ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2023-04-28 21:59:30.587 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.insert - ==> Parameters: 海贼王(String), {bcrypt}$2a$10$fH7ZDdmT6AUGHqATBTFmK.S0Ln9XB7Zi9pomlcwvTIIFakKNtPcDe(String), 蒙奇D路飞(String), 2(Integer), admin1@qq.com(String), 13911112222(String), 1(Integer), 10000(Long), 2023-04-09 18:03:51.0(Timestamp), 10000(Long), 2023-04-28 21:59:30.585(Timestamp), 0(Integer)
+2023-04-28 21:59:31.135 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 21:59:31.136 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 21:59:31.138 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 21:59:31.138 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 21:59:31.139 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 21:59:31.141 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 21:59:45.667 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM t_notice WHERE deleted = 0
+2023-04-28 21:59:45.668 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - ==> Parameters: 
+2023-04-28 21:59:45.670 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage_mpCount - <==      Total: 1
+2023-04-28 21:59:45.670 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage - ==>  Preparing: SELECT id,title,content,creator,create_time,updater,update_time,deleted FROM t_notice WHERE deleted=0 LIMIT ?
+2023-04-28 21:59:45.670 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage - ==> Parameters: 12(Long)
+2023-04-28 21:59:45.673 [http-nio-8080-exec-11] DEBUG top.whf.dao.NoticeDao.selectPage - <==      Total: 12
+2023-04-28 22:01:12.143 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:01:12.143 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:01:12.145 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:01:12.147 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:01:12.147 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:01:12.149 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:01:12.378 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:01:12.378 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:01:12.379 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:01:12.380 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:01:12.380 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:01:12.383 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:01:56.351 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:01:56.352 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:01:56.353 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:01:56.354 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:01:56.354 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:01:56.356 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:01:56.575 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:01:56.575 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:01:56.577 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:01:56.579 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:01:56.579 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:01:56.581 [http-nio-8080-exec-29] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:02:04.526 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:02:04.526 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:02:04.529 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:02:04.530 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:02:04.531 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:02:04.532 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:02:04.783 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:02:04.784 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:02:04.786 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:02:04.788 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:02:04.788 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:02:04.790 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:02:15.404 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:02:15.405 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:02:15.406 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:02:15.407 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:02:15.408 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:02:15.410 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:02:15.617 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:02:15.617 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:02:15.619 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:02:15.621 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:02:15.621 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:02:15.623 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:03:11.334 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:03:11.335 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:03:11.335 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:03:11.336 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:03:11.336 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:03:11.338 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:03:13.913 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:03:13.914 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:03:13.915 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:03:13.916 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:03:13.917 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:03:13.917 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:03:14.098 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:03:14.098 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:03:14.101 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:03:14.102 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:03:14.102 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:03:14.104 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:05:24.167 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:05:24.168 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:05:24.169 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:05:24.170 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:05:24.171 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:05:24.172 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:05:24.441 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:05:24.442 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:05:24.443 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:05:24.443 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:05:24.444 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:05:24.445 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:05:44.017 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:05:44.017 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:05:44.019 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:05:44.019 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:05:44.020 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:05:44.021 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:05:44.178 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:05:44.178 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:05:44.180 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:05:44.181 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:05:44.181 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:05:44.183 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:05:57.477 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:05:57.477 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:05:57.478 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:05:57.479 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:05:57.480 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:05:57.482 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:07:11.500 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:07:11.501 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:07:11.501 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:07:11.502 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:07:11.502 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:07:11.503 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:07:17.033 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:07:17.034 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:07:17.035 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:07:17.036 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:07:17.036 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:07:17.037 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:07:17.225 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:07:17.226 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:07:17.227 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:07:17.228 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:07:17.228 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:07:17.231 [http-nio-8080-exec-30] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:07:24.774 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:07:24.775 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:07:24.776 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:07:24.777 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:07:24.777 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:07:24.779 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:07:25.024 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:07:25.024 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:07:25.025 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:07:25.027 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:07:25.027 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:07:25.029 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:08:00.237 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:08:00.237 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:08:00.238 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:08:00.239 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:08:00.239 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:08:00.241 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:08:19.471 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:08:19.471 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:08:19.473 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:08:19.475 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:08:19.475 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:08:19.477 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:08:19.703 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:08:19.703 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:08:19.704 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:08:19.704 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:08:19.705 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:08:19.706 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:08:25.700 [http-nio-8080-exec-12] DEBUG top.whf.dao.NoticeDao.deleteById - ==>  Preparing: UPDATE t_notice SET updater=?,update_time=?, deleted=1 WHERE id=? AND deleted=0
+2023-04-28 22:08:25.700 [http-nio-8080-exec-12] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 22:08:25.691(Timestamp), 10008(Long)
+2023-04-28 22:08:25.701 [http-nio-8080-exec-12] DEBUG top.whf.dao.NoticeDao.deleteById - ==> Parameters: 10000(Long), 2023-04-28 22:08:25.701(Timestamp), 10009(Long)
+2023-04-28 22:08:25.730 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:08:25.730 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:08:25.731 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:08:25.732 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:08:25.732 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:08:25.734 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:08:30.832 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:08:30.833 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:08:30.834 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:08:30.835 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:08:30.835 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:08:30.836 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:08:31.035 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:08:31.035 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:08:31.036 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:08:31.037 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:08:31.037 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:08:31.040 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:10:10.407 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:10:10.407 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:10:10.410 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:10:10.411 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:10:10.411 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:10:10.413 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:10:12.313 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:10:12.314 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:10:12.316 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:10:12.316 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:10:12.317 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:10:12.318 [http-nio-8080-exec-23] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:10:12.493 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:10:12.494 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:10:12.495 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:10:12.496 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:10:12.496 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:10:12.498 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:11:06.974 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:11:06.974 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:11:06.976 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:11:06.977 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:11:06.978 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:11:06.979 [http-nio-8080-exec-26] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:11:07.135 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:11:07.135 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:11:07.136 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:11:07.137 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:11:07.137 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:11:07.138 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:12:47.967 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:12:47.967 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:12:47.968 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:12:47.969 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:12:47.969 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:12:47.970 [http-nio-8080-exec-1] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:12:56.072 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:12:56.072 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:12:56.073 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:12:56.074 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:12:56.074 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:12:56.076 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:13:27.331 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:13:27.331 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:13:27.333 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:13:27.333 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:13:27.333 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:13:27.334 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:13:27.522 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:13:27.522 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:13:27.523 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:13:27.524 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:13:27.524 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:13:27.526 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:13:36.461 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-04-28 22:13:36.461 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-04-28 22:13:36.463 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-04-28 22:13:36.464 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-04-28 22:13:36.464 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-04-28 22:13:36.466 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-04-28 22:13:36.625 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:13:36.625 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:13:36.626 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:13:36.626 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:13:36.626 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:13:36.627 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:16:38.356 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:16:38.356 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:16:38.358 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:16:38.359 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:16:38.359 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:16:38.362 [http-nio-8080-exec-14] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:17:11.338 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:17:11.338 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:17:11.339 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:17:11.340 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:17:11.341 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:17:11.342 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:18:13.963 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:18:13.963 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:18:13.964 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:18:13.965 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:18:13.965 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:18:13.967 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:18:29.061 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:18:29.061 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:18:29.063 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:18:29.064 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:18:29.064 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:18:29.066 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9
+2023-04-28 22:22:01.927 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-04-28 22:22:01.927 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-04-28 22:22:01.928 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-04-28 22:22:01.929 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-04-28 22:22:01.929 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 12(Long)
+2023-04-28 22:22:01.930 [http-nio-8080-exec-24] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 9

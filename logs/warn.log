@@ -1,1 +1,12 @@
-2023-04-28 11:22:10.534 [http-nio-8080-exec-16] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @40a4337a
+2023-04-29 10:58:57.964 [http-nio-8080-exec-27] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@495bb6c7] Transaction not enabled
+2023-04-29 10:59:46.908 [http-nio-8080-exec-3] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37ac7342] Transaction not enabled
+2023-04-29 10:59:54.169 [http-nio-8080-exec-9] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@480b3f32] Transaction not enabled
+2023-04-29 12:20:20.638 [MakuHikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - MakuHikariCP - Thread starvation or clock leap detected (housekeeper delta=35m18s236ms270µs).
+2023-04-29 13:07:01.274 [http-nio-8080-exec-20] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e9e526a] Transaction not enabled
+2023-04-29 13:09:07.182 [http-nio-8080-exec-2] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@335ab2a2] Transaction not enabled
+2023-04-29 13:16:14.161 [http-nio-8080-exec-8] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1841d1a5] Transaction not enabled
+2023-04-29 13:16:48.692 [http-nio-8080-exec-15] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e1a79a5] Transaction not enabled
+2023-04-29 13:26:27.192 [http-nio-8080-exec-19] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b1b26e3] Transaction not enabled
+2023-04-29 13:36:28.247 [http-nio-8080-exec-25] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25b7c413] Transaction not enabled
+2023-04-29 13:36:34.983 [http-nio-8080-exec-29] WARN  top.whf.rbac.service.impl.SysUserServiceImpl - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3751cb0b] Transaction not enabled
+2023-04-29 13:36:40.205 [http-nio-8080-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @40a4337a
