@@ -23,11 +23,48 @@ public interface SysUserService extends BaseService<SysUserEntity>{
      * @param newPassword 新密码
      */
     void updatePassword(Long id, String newPassword);
+
+    /**
+     * 分页查询用户
+     * @param query
+     * @return
+     */
     PageResult<SysUserVO> page(SysUserQuery query);
+
+    /**
+     * 新增用户
+     * @param vo
+     */
     void save(SysUserVO vo);
+
+    /**
+     * 修改用户
+     * @param vo
+     */
     void update(SysUserVO vo);
+
+    /**
+     * 批量删除用户
+     * @param ids
+     */
     void delete(List<Long> ids);
+
+    /**
+     * 导出用户信息到表格
+     * @param file
+     * @param password
+     */
     void importByExcel(MultipartFile file,String password);
+
+    /**
+     * 导出用户信息到表格
+     */
     void export();
+
+    /**
+     * 修改用户状态
+     * @param id
+     * @param status
+     */
     void updateStatus(long id,int status);
 }

@@ -60,8 +60,12 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserDao, SysUserEntit
     }
 
     private Map<String, Object> getParams(SysUserQuery query) {
+        System.out.println(query);
         Map<String, Object> params = new HashMap<>();
         params.put("username", query.getUsername());
+        params.put("realName", query.getRealName());
+        params.put("beginTime", query.getBeginTime());
+        params.put("endTime", query.getEndTime());
         params.put("mobile", query.getMobile());
         params.put("gender", query.getGender());
         return params;
