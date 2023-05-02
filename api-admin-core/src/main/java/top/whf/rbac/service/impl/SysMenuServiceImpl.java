@@ -1,16 +1,23 @@
 package top.whf.rbac.service.impl;
 
 import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.whf.common.constant.Constant;
+import top.whf.common.exception.ServerException;
+import top.whf.common.utils.PageResult;
 import top.whf.common.utils.TreeUtils;
 import top.whf.mybatis.service.impl.BaseServiceImpl;
 import top.whf.rbac.convert.SysMenuConvert;
 import top.whf.rbac.dao.SysMenuDao;
 import top.whf.rbac.entity.SysMenuEntity;
 import top.whf.rbac.enums.SuperAdminEnum;
+import top.whf.rbac.query.SysMenuQuery;
 import top.whf.rbac.service.SysMenuService;
+import top.whf.rbac.service.SysRoleMenuService;
 import top.whf.rbac.vo.SysMenuVO;
 import top.whf.security.user.UserDetail;
 
@@ -27,12 +34,26 @@ import java.util.Set;
 @Service
 @AllArgsConstructor
 public class SysMenuServiceImpl extends BaseServiceImpl<SysMenuDao, SysMenuEntity> implements SysMenuService{
+    private final SysRoleMenuService sysRoleMenuService;
+
+    @Override
+    public PageResult<SysMenuVO> page(SysMenuQuery query) {
+        LambdaQueryWrapper<SysMenuEntity> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(SysMenuEntity::getType, query.getType());
+        IPage<SysMenuEntity> page = baseMapper.selectPage(getPage(query), wrapper);
+        List<SysMenuVO> list = TreeUtils.build(SysMenuConvert.INSTANCE.convertList(page.getRecords()), Constant.ROOT);
+        return new PageResult<>(list, page.getTotal());
+    }
     @Override
     public List<SysMenuVO> getMenuList(Integer type) {
         List<SysMenuEntity> menuList = baseMapper.getMenuList(type);
         return TreeUtils.build(SysMenuConvert.INSTANCE.convertList(menuList), Constant.ROOT);
     }
 
+    @Override
+    public Long getSubMenuCount(Long pid) {
+        return count(new LambdaQueryWrapper<SysMenuEntity>().eq(SysMenuEntity::getPid, pid));
+    }
     @Override
     public List<SysMenuVO> getUserMenuList(UserDetail user, Integer type) {
         List<SysMenuEntity> menuList;
@@ -66,5 +87,33 @@ public class SysMenuServiceImpl extends BaseServiceImpl<SysMenuDao, SysMenuEntit
             permsSet.addAll(Arrays.asList(authority.trim().split(",")));
         }
         return permsSet;
+    }
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void save(SysMenuVO vo) {
+        SysMenuEntity entity = SysMenuConvert.INSTANCE.convert(vo);
+        // 保存菜单
+        baseMapper.insert(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void update(SysMenuVO vo) {
+        SysMenuEntity entity = SysMenuConvert.INSTANCE.convert(vo);
+        // 上级菜单不能为自己
+        if (entity.getId().equals(entity.getPid())) {
+            throw new ServerException("上级菜单不能为自己");
+        }
+        // 更新菜单
+        updateById(entity);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void delete(Long id) {
+        // 删除菜单
+        removeById(id);
+        // 删除角色菜单关系
+        sysRoleMenuService.deleteByMenuId(id);
     }
 }
