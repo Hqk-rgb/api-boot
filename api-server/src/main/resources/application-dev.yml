@@ -21,3 +21,38 @@ spring:
       max-lifetime: 1800000         # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认： 30 分钟
       connection-test-query: SELECT 1
       pool-name: MakuHikariCP
+#storage:
+#  enabled: true
+#  config:
+#    type: local
+#    domain: http://localhost:8080
+#  local:
+#    path: D:/Github/api-boot/upload
+aliyun:
+  sms:
+    platform: 0
+    signName: xx论坛
+    templateId: SMS_221122100
+    accessKey: LTAI5tJUCgQAKDYpMmRF12ar
+    secretKey: WzHfMEil6QaoLjlH83WZMeQgd66idS
+
+storage:
+  enabled: true
+  config:
+    type: aliyun
+    domain: https://king-hf-bucket.oss-cn-shanghai.aliyuncs.com
+  aliyun:
+    access-key-id: LTAI5tPr81ofKDqjFNPcCRqM
+    access-key-secret: e9rsuHOJunSIjhRiZomOxIkiETcEt4
+    end-point: oss-cn-shanghai.aliyuncs.com
+    bucket-name: king-hf-bucket
+
+#storage:
+#  enabled: true
+#  config:
+#    type: minio
+#  minio:
+#    access-key: admin
+#    secret-key: 12345678
+#    end-point:
+#    bucket-name: image

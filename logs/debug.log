@@ -1,23 +1,199 @@
-2023-05-02 09:54:28.368 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
-2023-05-02 09:54:30.684 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
-2023-05-02 09:55:08.189 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
-2023-05-02 09:55:08.207 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
-2023-05-02 09:55:08.234 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
-2023-05-02 09:55:08.245 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
-2023-05-02 09:55:08.245 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
-2023-05-02 09:55:08.250 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
-2023-05-02 09:55:08.335 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
-2023-05-02 09:55:08.335 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-02 09:55:08.335(Timestamp)
-2023-05-02 09:55:08.349 [http-nio-8080-exec-2] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
-2023-05-02 09:55:08.758 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
-2023-05-02 09:55:08.759 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
-2023-05-02 09:55:08.766 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
-2023-05-02 09:55:08.769 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
-2023-05-02 09:55:08.769 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
-2023-05-02 09:55:08.772 [http-nio-8080-exec-4] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
-2023-05-02 09:55:30.718 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
-2023-05-02 09:55:30.719 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
-2023-05-02 09:55:30.720 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
-2023-05-02 09:55:30.726 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
-2023-05-02 09:55:30.726 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 8(Long)
-2023-05-02 09:55:30.729 [http-nio-8080-exec-18] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-05-03 12:10:25.049 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 12:10:26.843 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 12:46:31.380 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 12:46:33.526 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 12:48:49.312 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:48:49.336 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:48:49.389 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:52:17.485 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:52:17.486 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:52:17.488 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:52:58.060 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:52:58.060 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:52:58.063 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:54:01.944 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:54:01.945 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 18582942093(String)
+2023-05-03 12:54:01.946 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 0
+2023-05-03 12:54:13.455 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:54:13.455 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:54:13.457 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:55:54.906 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 12:55:56.892 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 12:56:27.122 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:56:27.141 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:56:27.157 [http-nio-8080-exec-9] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:57:28.335 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-05-03 12:57:28.336 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-05-03 12:57:28.338 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 12:57:28.345 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 12:57:28.345 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 12:57:28.359 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 12:57:28.456 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 12:57:28.457 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 12:57:28.453(Timestamp)
+2023-05-03 12:57:28.472 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 12:57:32.629 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 12:57:32.629 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 12:57:32.631 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:10:20.891 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:10:20.891 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:10:20.894 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:10:35.077 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 13:10:38.375 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 13:11:11.921 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:11:11.939 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:11:11.957 [http-nio-8080-exec-8] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:14:15.070 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:14:15.071 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:14:15.073 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:14:19.755 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:14:19.756 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376581(String)
+2023-05-03 13:14:19.758 [http-nio-8080-exec-11] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 0
+2023-05-03 13:14:22.793 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:14:22.794 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:14:22.796 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:20:40.053 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 13:20:42.056 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 13:20:59.529 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:20:59.545 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:20:59.562 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:21:30.127 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 13:21:32.160 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 13:21:45.317 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:21:45.334 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:21:45.350 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:26:09.000 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:26:09.001 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:26:09.004 [http-nio-8080-exec-17] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:34:57.866 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 13:34:59.934 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 13:35:19.447 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:35:19.464 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:35:19.481 [http-nio-8080-exec-13] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:41:10.117 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 13:41:10.117 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 13:41:10.117 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:41:10.124 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==>  Preparing: SELECT t3.authority FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 ORDER BY t3.sort
+2023-05-03 13:41:10.127 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==> Parameters: 10002(Long)
+2023-05-03 13:41:10.152 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - <==      Total: 3
+2023-05-03 13:41:10.170 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 13:41:10.170 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: 离群之刺(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 13:41:10.162(Timestamp)
+2023-05-03 13:41:10.178 [http-nio-8080-exec-16] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 13:49:03.734 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-05-03 13:49:03.735 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-05-03 13:49:03.738 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 13:49:03.739 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 13:49:03.739 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 13:49:03.741 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 13:49:03.826 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 13:49:03.828 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 13:49:03.826(Timestamp)
+2023-05-03 13:49:03.831 [http-nio-8080-exec-27] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 13:49:03.860 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-05-03 13:49:03.860 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-05-03 13:49:03.860 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-05-03 13:49:03.870 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 13:49:03.870 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 13:49:03.870 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 13:49:08.329 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0
+2023-05-03 13:49:08.329 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - ==> Parameters: 
+2023-05-03 13:49:08.334 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList_mpCount - <==      Total: 1
+2023-05-03 13:49:08.340 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==>  Preparing: SELECT t1.* FROM sys_user t1 WHERE t1.super_admin = 0 AND t1.deleted = 0 LIMIT ?
+2023-05-03 13:49:08.341 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - ==> Parameters: 8(Long)
+2023-05-03 13:49:08.347 [http-nio-8080-exec-12] DEBUG top.whf.rbac.dao.SysUserDao.getList - <==      Total: 8
+2023-05-03 13:49:10.621 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 ORDER BY sort
+2023-05-03 13:49:10.621 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 
+2023-05-03 13:49:10.630 [http-nio-8080-exec-5] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 31
+2023-05-03 13:49:11.662 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage_mpCount - ==>  Preparing: SELECT COUNT(*) AS total FROM sys_role WHERE deleted = 0
+2023-05-03 13:49:11.663 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage_mpCount - ==> Parameters: 
+2023-05-03 13:49:11.669 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage_mpCount - <==      Total: 1
+2023-05-03 13:49:11.669 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage - ==>  Preparing: SELECT id,name,remark,creator,create_time,updater,update_time,deleted FROM sys_role WHERE deleted=0 LIMIT ?
+2023-05-03 13:49:11.669 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage - ==> Parameters: 6(Long)
+2023-05-03 13:49:11.669 [http-nio-8080-exec-10] DEBUG top.whf.rbac.dao.SysRoleDao.selectPage - <==      Total: 5
+2023-05-03 14:13:28.592 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-05-03 14:13:28.601 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-05-03 14:13:28.623 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-05-03 14:13:28.636 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 14:13:28.643 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 14:13:28.651 [http-nio-8080-exec-15] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 14:13:29.236 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 ORDER BY sort
+2023-05-03 14:13:29.237 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 
+2023-05-03 14:13:29.267 [http-nio-8080-exec-19] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 31
+2023-05-03 14:13:46.508 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 14:13:46.509 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 14:13:46.532 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:14:06.474 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 14:14:06.474 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 14:14:06.476 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:14:06.478 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==>  Preparing: SELECT t3.authority FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 ORDER BY t3.sort
+2023-05-03 14:14:06.479 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==> Parameters: 10002(Long)
+2023-05-03 14:14:06.479 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - <==      Total: 3
+2023-05-03 14:14:06.486 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 14:14:06.487 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: 离群之刺(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 14:14:06.485(Timestamp)
+2023-05-03 14:14:06.492 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 14:14:06.520 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - ==>  Preparing: SELECT t3.* FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 AND t3.type = ? ORDER BY t3.sort
+2023-05-03 14:14:06.520 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - ==> Parameters: 10002(Long), 0(Integer)
+2023-05-03 14:14:06.522 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - <==      Total: 2
+2023-05-03 14:14:06.522 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==>  Preparing: SELECT t3.authority FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 ORDER BY t3.sort
+2023-05-03 14:14:06.522 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==> Parameters: 10002(Long)
+2023-05-03 14:14:06.526 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - <==      Total: 3
+2023-05-03 14:14:40.334 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-05-03 14:14:40.335 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-05-03 14:14:40.337 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:14:40.338 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 14:14:40.338 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 14:14:40.340 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 14:14:40.450 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 14:14:40.456 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 14:14:40.45(Timestamp)
+2023-05-03 14:14:40.456 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 14:14:40.484 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-05-03 14:14:40.484 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-05-03 14:14:40.486 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-05-03 14:14:40.488 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 14:14:40.488 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 14:14:40.490 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 14:17:18.485 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 14:17:18.486 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 14:17:18.487 [http-nio-8080-exec-21] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:17:28.453 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 14:17:28.454 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 14:17:28.457 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:17:28.458 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==>  Preparing: SELECT t3.authority FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 ORDER BY t3.sort
+2023-05-03 14:17:28.459 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==> Parameters: 10002(Long)
+2023-05-03 14:17:28.460 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - <==      Total: 3
+2023-05-03 14:17:28.463 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 14:17:28.464 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: 离群之刺(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 14:17:28.463(Timestamp)
+2023-05-03 14:17:28.467 [http-nio-8080-exec-20] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 14:17:28.488 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - ==>  Preparing: SELECT t3.* FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 AND t3.type = ? ORDER BY t3.sort
+2023-05-03 14:17:28.489 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - ==> Parameters: 10002(Long), 0(Integer)
+2023-05-03 14:17:28.490 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserMenuList - <==      Total: 2
+2023-05-03 14:17:28.491 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==>  Preparing: SELECT t3.authority FROM sys_user_role t1 LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id LEFT JOIN sys_menu t3 ON t2.menu_id = t3.id WHERE t1.user_id = ? AND t1.deleted = 0 AND t2.deleted = 0 AND t3.deleted = 0 ORDER BY t3.sort
+2023-05-03 14:17:28.492 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - ==> Parameters: 10002(Long)
+2023-05-03 14:17:28.493 [http-nio-8080-exec-25] DEBUG top.whf.rbac.dao.SysMenuDao.getUserAuthorityList - <==      Total: 3
+2023-05-03 14:17:43.158 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (username = ?)
+2023-05-03 14:17:43.158 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: admin(String)
+2023-05-03 14:17:43.162 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 14:17:43.162 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 14:17:43.162 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 14:17:43.162 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 14:17:43.266 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 14:17:43.267 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 14:17:43.266(Timestamp)
+2023-05-03 14:17:43.267 [http-nio-8080-exec-7] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1
+2023-05-03 14:17:43.294 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==>  Preparing: SELECT * FROM sys_menu WHERE deleted = 0 AND type = ? ORDER BY sort
+2023-05-03 14:17:43.295 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - ==> Parameters: 0(Integer)
+2023-05-03 14:17:43.297 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getMenuList - <==      Total: 10
+2023-05-03 14:17:43.298 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 14:17:43.299 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 14:17:43.301 [http-nio-8080-exec-6] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 15:36:49.730 [main] DEBUG top.whf.ServerApplication - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-05-03 15:36:52.339 [main] DEBUG top.whf.security.filter.AuthenticationTokenFilter - Filter 'authenticationTokenFilter' configured for use
+2023-05-03 15:38:40.817 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 15:38:40.839 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 15:38:40.860 [http-nio-8080-exec-28] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 15:39:01.113 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==>  Preparing: SELECT id,username,password,real_name,avatar,gender,email,mobile,super_admin,status,creator,create_time,updater,update_time,deleted FROM sys_user WHERE deleted=0 AND (mobile = ?)
+2023-05-03 15:39:01.114 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - ==> Parameters: 15995376582(String)
+2023-05-03 15:39:01.116 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysUserDao.selectList - <==      Total: 1
+2023-05-03 15:39:01.119 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==>  Preparing: SELECT authority FROM sys_menu WHERE deleted = 0
+2023-05-03 15:39:01.120 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - ==> Parameters: 
+2023-05-03 15:39:01.126 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysMenuDao.getAuthorityList - <==      Total: 31
+2023-05-03 15:39:01.143 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==>  Preparing: INSERT INTO sys_log_login ( username, ip, address, user_agent, status, operation, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2023-05-03 15:39:01.144 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - ==> Parameters: admin(String), 127.0.0.1(String), 内网IP(String), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36(String), 1(Integer), 0(Integer), 2023-05-03 15:39:01.141(Timestamp)
+2023-05-03 15:39:01.153 [http-nio-8080-exec-3] DEBUG top.whf.rbac.dao.SysLogLoginDao.insert - <==    Updates: 1

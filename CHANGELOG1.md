@@ -1,4 +1,4 @@
-#  (2023-05-01)
+#  (2023-05-02)
 
 
 ### Bug Fixes
@@ -15,6 +15,7 @@
 * **custom:** 获取登录用户信息 eafb38b
 * **custom:** 基础核心模块common、security相关配置类 421db7d
 * **custom:** 基础核心模块mp相关配置 8366b76
+* **custom:** 角色和菜单模块（新用户授权） 71bbeed
 * **custom:** 配置项目整体依赖管理 d7c294d
 * **custom:** 批量删除 1d75902
 * **custom:** 修改用户密码功能 990990f

@@ -151,4 +151,9 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserDao, SysUserEntit
         user.setStatus(status);
         baseMapper.updateById(user);
     }
+
+    @Override
+    public SysUserVO getByMobile(String mobile) {
+        return SysUserConvert.INSTANCE.convert(baseMapper.getByMobile(mobile));
+    }
 }

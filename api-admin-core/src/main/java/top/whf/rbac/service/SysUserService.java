@@ -67,4 +67,11 @@ public interface SysUserService extends BaseService<SysUserEntity>{
      * @param status
      */
     void updateStatus(long id,int status);
+
+    /**
+     * 根据手机号获取用户
+     * @param mobile
+     * @return
+     */
+    SysUserVO getByMobile(String mobile);
 }

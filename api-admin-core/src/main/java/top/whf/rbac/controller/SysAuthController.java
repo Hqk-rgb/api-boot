@@ -10,6 +10,7 @@ import top.whf.rbac.service.SysAuthService;
 import top.whf.rbac.service.SysCaptchaService;
 import top.whf.rbac.vo.SysAccountLoginVO;
 import top.whf.rbac.vo.SysCaptchaVO;
+import top.whf.rbac.vo.SysMobileLoginVO;
 import top.whf.rbac.vo.SysTokenVO;
 import top.whf.security.utils.TokenUtils;
 /**
@@ -45,5 +46,20 @@ public class SysAuthController {
     public Result<String> logout(HttpServletRequest request) {
         sysAuthService.logout(TokenUtils.getAccessToken(request));
         return Result.ok();
+    }
+    @PostMapping("send/code")
+    @Operation(summary = "发送短信验证码")
+    public Result<String> sendCode(String mobile) {
+        boolean flag = sysAuthService.sendCode(mobile);
+        if (!flag) {
+            return Result.error("短信发送失败");
+        }
+        return Result.ok();
+    }
+    @PostMapping("mobile")
+    @Operation(summary = "手机号登录")
+    public Result<SysTokenVO> mobile(@RequestBody SysMobileLoginVO login) {
+        SysTokenVO token = sysAuthService.loginByMobile(login);
+        return Result.ok(token);
     }
 }

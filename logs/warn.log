@@ -1,1 +1,52 @@
-2023-05-02 11:03:05.901 [http-nio-8080-exec-28] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3d0f8e03
+2023-05-03 12:10:27.317 [main] WARN
+o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+Exception encountered during context initialization
+- cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException:
+Error creating bean with name 'securityConfig' defined in file [D:\Github\api-boot\api-base\target\classes\top\whf\security\config\SecurityConfig.class]:
+Unsatisfied dependency expressed through constructor parameter 3:
+No qualifying bean of type 'top.whf.security.mobile.MobileUserDetailsService' available:
+expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-05-03 15:39:24.142 [http-nio-8080-exec-9] WARN  com.aliyun.oss - [Server]Unable to execute HTTP request: 返回结果无效，无法解析。
+[ErrorCode]: InvalidResponse
+[RequestId]: 64520FA77C206D34336EFC44
+[HostId]: null
+[ResponseError]:
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>SignatureDoesNotMatch</Code>
+  <Message>The request signature we calculated does not match the signature you provided. Check your key and signing method.</Message>
+  <RequestId>64520FA77C206D34336EFC44</RequestId>
+  <HostId>king-hf-bucket.oss-cn-shanghai.aliyuncs.com</HostId>
+  <OSSAccessKeyId>LTAI5tPr81ofKDqjFNPcCRqM</OSSAccessKeyId>
+  <SignatureProvided>zTcjEyidNmScN1u8odprDMxTQ5g=</SignatureProvided>
+  <StringToSign>PUT
+
+image/jpeg
+Wed, 03 May 2023 07:39:23 GMT
+/king-hf-bucket/20230503/wallhaven-8o29z1_56363.jpg</StringToSign>
+  <StringToSignBytes>50 55 54 0A 0A 69 6D 61 67 65 2F 6A 70 65 67 0A 57 65 64 2C 20 30 33 20 4D 61 79 20 32 30 32 33 20 30 37 3A 33 39 3A 32 33 20 47 4D 54 0A 2F 6B 69 6E 67 2D 68 66 2D 62 75 63 6B 65 74 2F 32 30 32 33 30 35 30 33 2F 77 61 6C 6C 68 61 76 65 6E 2D 38 6F 32 39 7A 31 5F 35 36 33 36 33 2E 6A 70 67 </StringToSignBytes>
+  <EC>0002-00000040</EC>
+</Error>
+
+2023-05-03 15:41:10.680 [http-nio-8080-exec-4] WARN  com.aliyun.oss - [Server]Unable to execute HTTP request: 返回结果无效，无法解析。
+[ErrorCode]: InvalidResponse
+[RequestId]: 64521012897E31333501E40A
+[HostId]: null
+[ResponseError]:
+<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>SignatureDoesNotMatch</Code>
+  <Message>The request signature we calculated does not match the signature you provided. Check your key and signing method.</Message>
+  <RequestId>64521012897E31333501E40A</RequestId>
+  <HostId>king-hf-bucket.oss-cn-shanghai.aliyuncs.com</HostId>
+  <OSSAccessKeyId>LTAI5tPr81ofKDqjFNPcCRqM</OSSAccessKeyId>
+  <SignatureProvided>Z7uiS0CruCu4pQMqBm3BdePtY7Q=</SignatureProvided>
+  <StringToSign>PUT
+
+image/jpeg
+Wed, 03 May 2023 07:41:10 GMT
+/king-hf-bucket/20230503/me_56470.jpg</StringToSign>
+  <StringToSignBytes>50 55 54 0A 0A 69 6D 61 67 65 2F 6A 70 65 67 0A 57 65 64 2C 20 30 33 20 4D 61 79 20 32 30 32 33 20 30 37 3A 34 31 3A 31 30 20 47 4D 54 0A 2F 6B 69 6E 67 2D 68 66 2D 62 75 63 6B 65 74 2F 32 30 32 33 30 35 30 33 2F 6D 65 5F 35 36 34 37 30 2E 6A 70 67 </StringToSignBytes>
+  <EC>0002-00000040</EC>
+</Error>
+

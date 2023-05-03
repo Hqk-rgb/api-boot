@@ -14,6 +14,7 @@
         <module>api-admin-core</module>
         <module>api-server</module>
         <module>api-admin-biz</module>
+        <module>api-plugin</module>
     </modules>
 
     <parent>

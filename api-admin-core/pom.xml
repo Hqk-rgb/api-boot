@@ -30,6 +30,18 @@
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>top.whf</groupId>
+            <artifactId>sms-plugin</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>top.whf</groupId>
+            <artifactId>storage-plugin</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
